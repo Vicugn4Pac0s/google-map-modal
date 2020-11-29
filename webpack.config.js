@@ -32,6 +32,10 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"],
+      },
     ],
   },
   // ES5(IE11等)向けの指定

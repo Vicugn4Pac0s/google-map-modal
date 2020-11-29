@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Map Modal</title>
-</head>
-<body>
-  
-  <script src="./main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Map Modal</title>
+  </head>
+  <body>
+    <h2 style="text-align: center">Google Map Mini</h2>
+
+    <div class="googleMapMini">
+      <div class="gmm_search">
+        <input id="gmm-address" class="gmm_address" type="textbox" value="" />
+        <input
+          id="gmm-btnSearch"
+          class="gmm_btnSearch"
+          type="button"
+          value="送信"
+        />
+      </div>
+
+      <div class="gmm_result">
+        <div id="gmm-addressDisplay" class="gmm_addressDisplay">
+          ここに住所が表示されます。
+        </div>
+        <div id="gmm-btnCopy" class="gmm_btnCopy disabled">コピーする</div>
+      </div>
+
+      <div id="gmm-map" class="gmm_map"></div>
+    </div>
+
+
+
+    <script>
+      var initMap = (function () {
+        return function () {
+          new GoogleMapMini();
+        };
+      })();
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYCWNT7ZHpYeacocWJh6jM8HeGwAZMftM&callback=initMap"
+      async
+      defer
+    ></script>
+
+    <script src="./main.js"></script>
+  </body>
 </html>

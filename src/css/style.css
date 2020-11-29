@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+.googleMapMini {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 640px;
+  width: 90%;
+}
+.googleMapMini .gmm_map {
+  background: #eee;
+  height: 400px;
+  width: 100%;
+}
+.googleMapMini .gmm_address {
+}
+.googleMapMini .gmm_btnSearch {
+}
+.googleMapMini .gmm_result {
+  background: #f9f9f9;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+}
+.googleMapMini .gmm_addressDisplay {
+}
+.googleMapMini .gmm_btnCopy {
+  background: #ddd;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  padding: 2.5px 7.5px;
+  margin-top: 5px;
+}
+.googleMapMini .gmm_btnCopy.disabled {
+  display: none !important;
+}
