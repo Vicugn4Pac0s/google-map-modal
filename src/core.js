@@ -1,6 +1,6 @@
+import loadAPI from "./utilities/load-api";
 import View from "./view/view";
 import googleMapModule from "./modules/google-map-module";
-import loadAPI from "./utilities/load-api";
 export default class {
   constructor(options) {
     this.options = options;
