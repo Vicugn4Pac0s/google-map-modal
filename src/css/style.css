@@ -1,30 +1,67 @@
 @charset "utf-8";
 
-.googleMapMini {
+.googleMapModal_wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+
+  display: none;
+}
+.googleMapModal_wrap.active {
+  display: block;
+}
+.googleMapModal {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.googleMapModal_layer {
+  background: rgba(0,0,0, 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+
+.googleMapModal .gmm_main {
+  background: #fff;
+  box-sizing: border-box;
+  padding: 20px;
   text-align: center;
   margin: 0 auto;
   max-width: 640px;
   width: 90%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
 }
-.googleMapMini .gmm_map {
+.googleMapModal .gmm_map {
   background: #eee;
   height: 400px;
   width: 100%;
 }
-.googleMapMini .gmm_address {
+.googleMapModal .gmm_address {
 }
-.googleMapMini .gmm_btnSearch {
+.googleMapModal .gmm_btnSearch {
 }
-.googleMapMini .gmm_result {
+.googleMapModal .gmm_result {
   background: #f9f9f9;
   box-sizing: border-box;
   padding: 10px;
   margin: 10px 0;
   width: 100%;
 }
-.googleMapMini .gmm_addressDisplay {
+.googleMapModal .gmm_addressDisplay {
 }
-.googleMapMini .gmm_btnCopy {
+.googleMapModal .gmm_btnCopy {
   background: #ddd;
   cursor: pointer;
   display: inline-block;
@@ -32,6 +69,6 @@
   padding: 2.5px 7.5px;
   margin-top: 5px;
 }
-.googleMapMini .gmm_btnCopy.disabled {
+.googleMapModal .gmm_btnCopy.disabled {
   display: none !important;
 }
