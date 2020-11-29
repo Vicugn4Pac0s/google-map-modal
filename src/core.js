@@ -4,11 +4,7 @@ import loadAPI from "./utilities/load-api";
 export default class {
   constructor(options) {
     this.options = options;
-    loadAPI(this.options.key);
-    new View();
-
-    this.el_target = document.getElementById(this.options.target);
-    this.el_gmm_wrap = document.getElementById("googleMapModal_wrap");
+    this.createInitialElements();
 
     this.is_created_map = 0;
     this.is_modal_open = 0;
@@ -40,6 +36,13 @@ export default class {
     if (!this.is_modal_open) return false;
     this.el_gmm_wrap.classList.remove("active");
     this.is_modal_open = 0;
+  }
+  createInitialElements() {
+    loadAPI(this.options.key);
+    new View();
+
+    this.el_target = document.getElementById(this.options.target);
+    this.el_gmm_wrap = document.getElementById("googleMapModal_wrap");
   }
   createMap() {
     let is_use_googlemapAPI = google && google.maps ? 1 : 0;
