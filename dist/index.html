@@ -13,14 +13,12 @@
 
     <script>
       window.onload = function() {
-        new GoogleMapModal();
+        new GoogleMapModal({
+          target: 'js-btn',
+          key: 'AIzaSyCYCWNT7ZHpYeacocWJh6jM8HeGwAZMftM',
+        });
       }
     </script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYCWNT7ZHpYeacocWJh6jM8HeGwAZMftM"
-      async
-      defer
-    ></script>
 
     <script src="./main.js"></script>
   </body>
