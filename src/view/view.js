@@ -7,7 +7,7 @@ export default class {
     <div class="googleMapModal">
       <div class="gmm_main">
         <div class="gmm_search">
-          <input id="gmm-address" class="gmm_address" type="textbox" value="" />
+          <input id="gmm-address" class="gmm_address" type="textbox" value="" placeholder="施設名等を入力" />
           <input
             id="gmm-btnSearch"
             class="gmm_btnSearch"
