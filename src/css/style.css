@@ -19,7 +19,7 @@
   width: 100%;
 }
 .googleMapModal .gmm_layer {
-  background: rgba(0,0,0, 0.9);
+  background: rgba(0, 0, 0, 0.9);
   position: absolute;
   top: 0;
   left: 0;
@@ -58,9 +58,35 @@
   height: 400px;
   width: 100%;
 }
+.googleMapModal .gmm_search {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 auto;
+  max-width: 270px;
+  padding-right: 50px;
+}
 .googleMapModal .gmm_address {
+  background: #eee;
+  border: none;
+  outline: 0;
+  line-height: 30px;
+  width: 100%;
 }
 .googleMapModal .gmm_btnSearch {
+  background: #1fa463;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  line-height: 30px;
+  width: 50px;
+}
+.googleMapModal .gmm_btnSearch:focus {
+  outline: none;
 }
 .googleMapModal .gmm_result {
   background: #f9f9f9;

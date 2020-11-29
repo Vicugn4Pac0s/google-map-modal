@@ -12,7 +12,7 @@ export default class {
             id="gmm-btnSearch"
             class="gmm_btnSearch"
             type="button"
-            value="送信"
+            value="検索"
           />
         </div>
 
