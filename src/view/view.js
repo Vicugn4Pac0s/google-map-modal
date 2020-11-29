@@ -24,8 +24,10 @@ export default class {
         </div>
 
         <div id="gmm-map" class="gmm_map"></div>
+
+        <div id="gmm_close" class="gmm_close">×</div>
       </div>
-      <div id="googleMapModal_layer" class="googleMapModal_layer">
+      <div id="gmm_layer" class="gmm_layer">
     </div>
     `;
     this.el_gmm = document.createElement("div");

@@ -18,7 +18,7 @@
   height: 100%;
   width: 100%;
 }
-.googleMapModal_layer {
+.googleMapModal .gmm_layer {
   background: rgba(0,0,0, 0.9);
   position: absolute;
   top: 0;
@@ -26,6 +26,16 @@
   height: 100%;
   width: 100%;
   z-index: 0;
+}
+.googleMapModal .gmm_close {
+  color: #fff;
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 50px;
+  text-align: center;
+  position: absolute;
+  top: -50px;
+  right: 0;
 }
 
 .googleMapModal .gmm_main {
