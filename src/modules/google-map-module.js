@@ -41,7 +41,8 @@ export default class {
   }
   render(data) {
     var location = data[0].geometry.location,
-      formatted_address = data[0].formatted_address;
+      raw_formatted_address = data[0].formatted_address,
+      formatted_address = raw_formatted_address.replace('日本、', '');
 
     this.createMapMarker(location);
     this.Map.setCenter(location);
