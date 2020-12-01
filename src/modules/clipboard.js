@@ -14,7 +14,6 @@ export default class {
   }
   copy() {
     let txt = this.$_txtCopy.innerText;
-    console.log(txt);
     navigator.clipboard
       .writeText(txt)
       .then((data) => alert("コピーしました。"))
