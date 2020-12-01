@@ -17,7 +17,7 @@ export default class {
     navigator.clipboard
       .writeText(txt)
       .then((data) => alert("コピーしました。"))
-      .catch((e) => alert("コピーに失敗しました。"));
+      .catch((e) => alert("コピーに失敗しました。。。ブラウザが対応していないのかもしれません。お手数ですが、直接コピーしてください。"));
   }
   active() {
     if (this.state === 1 || !this.is_use_clipboard) return false;
