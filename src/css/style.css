@@ -135,6 +135,12 @@
   .googleMapModal .gmm_main {
     padding: 20px 10px;
   }
+  .googleMapModal .gmm_address {
+    font-size: 16px;
+  }
+  .googleMapModal .gmm_btnSearch {
+    font-size: 16px;
+  }
   .googleMapModal .gmm_addressDisplay {
     font-size: 13px;
   }
