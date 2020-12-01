@@ -32,7 +32,7 @@ export default class {
       { address: inputAddress },
       function (results, status) {
         if (status != "OK") {
-          alert("該当する結果がありませんでした：" + status);
+          alert("該当する結果が見つからない、もしくは候補が複数件見つかりました。 「施設名 場所名」 等で絞り込んでください。：" + status);
           return false;
         }
         self.render(results);
