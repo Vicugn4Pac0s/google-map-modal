@@ -4,15 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Google Map Modal</title>
+
+    <style>
+      .wrap {
+        margin: 80px 0;
+      }
+      .inputA {
+        /* iOS用 リセット */
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -webkit-appearance: none;
+        border-radius: 0;
+        padding: 0;
+        max-width: 320px;
+        
+        background: #eee;
+        border: none;
+        font-size: 16px;
+        outline: 0;
+        padding: 0 10px;
+        line-height: 30px;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
-    <h2 style="text-align: center">Google Map Modal</h2>
-
-    <div style="text-align: center;">
-      <input type="text" placeholder="住所">
-      <div id="js-btn" style="cursor: pointer;">施設名で検索する</div>
+    <div class="wrap">
+      <h2 style="text-align: center; margin-bottom: 40px;">Google Map Modal【DEMO】</h2>
+  
+      <div style="text-align: center;">
+        <input class="inputA" type="text" placeholder="住所を入れてください。" style="margin-bottom: 5px;">
+        <div id="js-btn" style="cursor: pointer; font-size: 14px; text-decoration: underline; color: #999;">施設名で検索する</div>
+      </div>
     </div>
-
 
     <script>
       window.onload = function() {
