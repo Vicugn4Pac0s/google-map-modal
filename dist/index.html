@@ -5,9 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Google Map Modal</title>
 
+    <!-- ソースコード装飾表示 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+    <script>
+      // ハイライトを実行
+      hljs.initHighlightingOnLoad();
+
+      // <pre><code></code></pre>（メモ：ソースコードはこれでくくる）
+    </script>
+    <!-- ソースコード装飾表示 End -->
+
     <style>
       .wrap {
         margin: 80px 0;
+      }
+      .l-inner {
+        margin: 0 auto;
+        max-width: 1000px;
+        width: 90%;
       }
       .inputA {
         /* iOS用 リセット */
@@ -18,7 +37,7 @@
         border-radius: 0;
         padding: 0;
         max-width: 320px;
-        
+
         background: #eee;
         border: none;
         font-size: 16px;
@@ -31,21 +50,62 @@
   </head>
   <body>
     <div class="wrap">
-      <h2 style="text-align: center; margin-bottom: 40px;">Google Map Modal【DEMO】</h2>
+      <div class="l-inner">
+        <h1 style="font-size: 24px; text-align: center; margin-bottom: 40px">
+          Google Map Modal【DEMO】
+        </h1>
   
-      <div style="text-align: center;">
-        <input class="inputA" type="text" placeholder="住所を入れてください。" style="margin-bottom: 5px;">
-        <div id="js-btn" style="cursor: pointer; font-size: 14px; text-decoration: underline; color: #999;">施設名で検索する</div>
+        <div style="text-align: center; margin-bottom: 40px;">
+          <input
+            class="inputA"
+            type="text"
+            placeholder="住所を入れてください。"
+            style="margin-bottom: 5px"
+          />
+          <div
+            id="js-btn"
+            style="
+              cursor: pointer;
+              font-size: 14px;
+              text-decoration: underline;
+              color: #999;
+            "
+          >
+            施設名で検索する
+          </div>
+        </div>
+
+        <div class="sample">
+          <h2 style="font-size: 18px; text-align: center;">使い方</h2>
+          <pre><code>
+            //JavaScriptの場合
+            window.onload = function () {
+              new GoogleMapModal({
+                target: "js-btn", // クリックでモーダルを表示させたい要素のID名（ここでは施設名で検索）
+                key: "xxxxxxxx", //APIキー
+              });
+            };
+
+            //jQueryの場合
+            $(window).on('load', function () {
+              new GoogleMapModal({
+                target: "js-btn", // クリックでモーダルを表示させたい要素のID名（ここでは施設名で検索）
+                key: "xxxxxxxx", //APIキー
+              });
+            });
+          </code></pre>
+        </div>
+
       </div>
     </div>
 
     <script>
-      window.onload = function() {
+      window.onload = function () {
         new GoogleMapModal({
-          target: 'js-btn',
-          key: 'AIzaSyCYCWNT7ZHpYeacocWJh6jM8HeGwAZMftM',
+          target: "js-btn",
+          key: "AIzaSyCYCWNT7ZHpYeacocWJh6jM8HeGwAZMftM",
         });
-      }
+      };
     </script>
 
     <script src="./main.js"></script>
