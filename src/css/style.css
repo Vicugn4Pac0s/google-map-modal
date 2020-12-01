@@ -40,8 +40,9 @@
 
 .googleMapModal .gmm_main {
   background: #fff;
+  border-radius: 10px;
   box-sizing: border-box;
-  padding: 20px;
+  padding: 30px 20px;
   text-align: center;
   margin: 0 auto;
   max-width: 640px;
@@ -66,13 +67,33 @@
   padding-right: 50px;
 }
 .googleMapModal .gmm_address {
+  /* iOS用 リセット */
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-appearance: none;
+  border-radius: 0;
+  padding: 0;
+  max-width: 100%;
+  
   background: #eee;
   border: none;
   outline: 0;
+  padding: 0 10px;
   line-height: 30px;
   width: 100%;
 }
 .googleMapModal .gmm_btnSearch {
+  /* iOS用 リセット */
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  padding: 0;
+
   background: #1fa463;
   border: none;
   color: #fff;
@@ -107,4 +128,17 @@
 }
 .googleMapModal .gmm_btnCopy.disabled {
   display: none !important;
+}
+
+/* SP */
+@media screen and (max-width:767px) {
+  .googleMapModal .gmm_main {
+    padding: 20px 10px;
+  }
+  .googleMapModal .gmm_addressDisplay {
+    font-size: 13px;
+  }
+  .googleMapModal .gmm_map {
+    height: 240px;
+  }
 }
