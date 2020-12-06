@@ -11,8 +11,8 @@
     "start/browsersync": "browser-sync start --proxy 127.0.0.1:8080 --files ./dist/*"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Yoshiki Yamada",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
