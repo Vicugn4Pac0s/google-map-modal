@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Google Map Modal</title>
-    <meta name="description" content="「Google Map Modal」はモーダルウインドウでGoogleMapを表示させるプログラムです。">
+    <meta
+      name="description"
+      content="「Google Map Modal」はモーダルウインドウでGoogleMapを表示させるプログラムです。"
+    />
 
     <!-- ソースコード装飾表示 -->
     <link
@@ -21,7 +24,10 @@
     <!-- ソースコード装飾表示 End -->
 
     <style>
-      .wrap {
+      body {
+        margin: 0;
+      }
+      main {
         margin: 80px 0;
       }
       .l-inner {
@@ -39,14 +45,14 @@
         text-decoration: none;
         padding: 10px 60px;
 
-        transition: .75s;
+        transition: 0.75s;
       }
       .downloads a:hover {
-        background: #E34133;
+        background: #e34133;
 
-        transition: .25s;
+        transition: 0.25s;
       }
-      @media screen and (max-width:640px) { 
+      @media screen and (max-width: 640px) {
         .downloads a {
           display: block;
           margin-bottom: 10px;
@@ -70,65 +76,84 @@
         line-height: 30px;
         width: 100%;
       }
+      footer {
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+      }
     </style>
   </head>
   <body>
     <div class="wrap">
-      <div class="l-inner">
-        <h1 style="font-size: 24px; text-align: center; margin-bottom: 40px">
-          Google Map Modal【DEMO】
-        </h1>
-        <p class="description" style="text-align: center; margin-bottom: 40px;">
-          「Google Map Modal」はモーダルウインドウでGoogleMapを表示させるプログラムです。<br>例えば、お問い合わせフォーム等に「施設名で検索」機能を追加することができます。
-        </p>
-  
-        <div style="text-align: center; margin-bottom: 40px;">
-          <input
-            class="inputA"
-            type="text"
-            placeholder="住所を入れてください。"
-            style="margin-bottom: 5px"
-          />
-          <div
-            id="js-btn"
-            style="
-              cursor: pointer;
-              font-size: 14px;
-              text-decoration: underline;
-              color: #999;
-            "
+      <main>
+        <div class="l-inner">
+          <h1 style="font-size: 24px; text-align: center; margin-bottom: 40px">
+            Google Map Modal【DEMO】
+          </h1>
+          <p
+            class="description"
+            style="text-align: center; margin-bottom: 40px"
           >
-            施設名で検索する
+            「Google Map
+            Modal」はモーダルウインドウでGoogleMapを表示させるプログラムです。<br />例えば、お問い合わせフォーム等に「施設名で検索」機能を追加することができます。
+          </p>
+
+          <div style="text-align: center; margin-bottom: 40px">
+            <input
+              class="inputA"
+              type="text"
+              placeholder="住所を入れてください。"
+              style="margin-bottom: 5px"
+            />
+            <div
+              id="js-btn"
+              style="
+                cursor: pointer;
+                font-size: 14px;
+                text-decoration: underline;
+                color: #999;
+              "
+            >
+              施設名で検索する
+            </div>
+          </div>
+
+          <div class="downloads">
+            <a href="./google-map-modal.js" download>Download Now</a>
+            <a
+              href="https://github.com/Vicugn4Pac0s/google-map-modal"
+              target="_blank"
+              >View On Github</a
+            >
+          </div>
+
+          <div class="sample">
+            <h2 style="font-size: 18px; text-align: center">使い方</h2>
+            <pre><code>
+              //JavaScriptの場合
+              window.onload = function () {
+                new GoogleMapModal({
+                  target: "js-btn", // クリックでモーダルを表示させたい要素のID名（ここでは施設名で検索）
+                  key: "xxxxxxxx", //APIキー
+                });
+              };
+  
+              //jQueryの場合
+              $(window).on('load', function () {
+                new GoogleMapModal({
+                  target: "js-btn", // クリックでモーダルを表示させたい要素のID名（ここでは施設名で検索）
+                  key: "xxxxxxxx", //APIキー
+                });
+              });
+            </code></pre>
           </div>
         </div>
+      </main>
 
-        <div class="downloads">
-          <a href="./google-map-modal.js" download>Download Now</a>
-          <a href="https://github.com/Vicugn4Pac0s/google-map-modal" target="_blank">View On Github</a>
-        </div>
-
-        <div class="sample">
-          <h2 style="font-size: 18px; text-align: center;">使い方</h2>
-          <pre><code>
-            //JavaScriptの場合
-            window.onload = function () {
-              new GoogleMapModal({
-                target: "js-btn", // クリックでモーダルを表示させたい要素のID名（ここでは施設名で検索）
-                key: "xxxxxxxx", //APIキー
-              });
-            };
-
-            //jQueryの場合
-            $(window).on('load', function () {
-              new GoogleMapModal({
-                target: "js-btn", // クリックでモーダルを表示させたい要素のID名（ここでは施設名で検索）
-                key: "xxxxxxxx", //APIキー
-              });
-            });
-          </code></pre>
-        </div>
-
-      </div>
+      <footer>
+        <small>Copyright © 2020 YOSHIKI inc. All Rights Reserved.</small>
+      </footer>
     </div>
 
     <script>
